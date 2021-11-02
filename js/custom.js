@@ -138,7 +138,7 @@ function searchContent(event) {
     }
     console.time('search-bar');
     $.ajax({
-        url: searchLogicUrl,
+        url: '/shared/search-logic.php',
         data: { term: term },
         method: 'POST',
         success: (res) => {
