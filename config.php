@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
     $isProduction = true;
 
     if($isProduction) {
@@ -13,6 +17,8 @@
 
         $upload_dir = '/home/introarquitectur/public_html/uploads/';
 
+        $origins = 'introarquitectura.com.ar';
+
     } else {
 
         $url = 'http://localhost/Intro/';
@@ -24,8 +30,13 @@
 
         $upload_dir = 'D:/xampp/htdocs/Intro/uploads/';
 
+        $origins = '*';
+
     }
 
+    header('Access-Control-Allow-Origin: *');
+    header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 
     try {
         $db = new PDO($dsn, $user, $password);
