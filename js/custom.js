@@ -135,13 +135,14 @@ function searchContent(event) {
 
         return;
     }
-
+    console.time('search');
     $.ajax({
         url: searchLogicUrl,
         data: { term: term },
         method: 'POST',
         success: (res) => {
-
+            console.timeEnd('search');
+            console.log(res);
             const response = JSON.parse(res);
 
             if(!response.ok) {
