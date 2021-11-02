@@ -5,8 +5,14 @@
 
         global $db;
 
+        $fields = 'id, slug, title, popularity';
+
+        if($table == 'posts') {
+            $fields .= ', category';
+        }
+
         $statement = $db->prepare("
-            SELECT * FROM 
+            SELECT $fields FROM 
                 $table
             WHERE
                 title LIKE '%$term%'

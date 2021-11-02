@@ -122,7 +122,7 @@ $(document).ready(() => {
 
 // Search bar
 function searchContent(event) {
-    console.log('entro');
+
     const term = event.target.value;
     
     if(!term) {
@@ -136,53 +136,55 @@ function searchContent(event) {
 
         return;
     }
-    console.time('search-bar');
+
     $.ajax({
-        url: '/shared/search-logic.php',
+        url: './shared/search-logic.php',
         data: { term: term },
-        method: 'POST',
-        success: (res) => {
-            console.timeEnd('search-bar');
-            console.log(res);
-            const response = JSON.parse(res);
+        method: 'POST'
+    })
+    .done((res) => {
 
-            if(!response.ok) {
-                return;
-            }
+        const response = JSON.parse(res);
 
-            if(response.results.length == 0) {
-                $('.search-content .results').css('display', 'block');
-                $('.search-content .results ul').html(`
-                    <li>No se han encontado resultados para '${term}'</li>
-                `);
-                return;
-            }
-
-            let html = "";
-
-            for (let i = 0; i < response.results.length; i++) {
-                const result = response.results[i];
-                let typeUrl = (result?.category) ? result.category : 'proyectos';
-
-                if(typeUrl == 'noticia') typeUrl = 'noticias';
-
-                const resultUrl = `${siteUrl}${typeUrl}/${result.slug}`;
-
-                html += `
-                    <li onclick="location.href='${resultUrl}'">
-                        ${result.title}
-                    </li>
-                `;
-
-                if((i + 1) == 5) {
-                    break;
-                }
-                
-            }
-
-            $('.search-content .results ul').html(html);
-
+        if(!response.ok) {
+            return;
         }
+
+        if(response.results.length == 0) {
+            $('.search-content .results').css('display', 'block');
+            $('.search-content .results ul').html(`
+                <li>No se han encontado resultados para '${term}'</li>
+            `);
+            return;
+        }
+
+        let html = "";
+
+        for (let i = 0; i < response.results.length; i++) {
+            const result = response.results[i];
+            let typeUrl = (result?.category) ? result.category : 'proyectos';
+
+            if(typeUrl == 'noticia') typeUrl = 'noticias';
+
+            const resultUrl = `${siteUrl}${typeUrl}/${result.slug}`;
+
+            html += `
+                <li onclick="location.href='${resultUrl}'">
+                    ${result.title}
+                </li>
+            `;
+
+            if((i + 1) == 5) {
+                break;
+            }
+            
+        }
+
+        $('.search-content .results ul').html(html);
+
+    })
+    .fail((error) => {
+        console.log(error.responseText);
     })
     
 }
