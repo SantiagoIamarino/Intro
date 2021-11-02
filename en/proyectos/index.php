@@ -125,7 +125,7 @@
                     <div class="row gutter-xl projects-overview">
                             
                             <?php foreach ($projects as $key => $project) : ?>
-                                <div class="col-md-6">
+                                <div class="col-md-6 <?php echo ($key > 9) ? 'project-hidden' : '' ?>">
                                     <article class="media media-project m-b-50" onclick='goToProject(event)'>
                                         <figure class="media__img">
                                             <img src="<?php echo $assets_url . 'uploads/' . $project['principal_img']?>" 
