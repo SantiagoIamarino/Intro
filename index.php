@@ -152,7 +152,7 @@
                         </ul>
                         <div class="languages">
                             <label class='d-block'
-                                style='font-size: 20px; margin-bottom: 0'>Lenguaje:</label>
+                                style='font-size: 20px; margin-bottom: 0'>Idioma:</label>
 
                             <a href='#' style='cursor: pointer; font-size: 18px; font-weight: normal;color:black'>
                                 <img src="<?php echo $assets_url ?>/images/icon/spain-flag-icon.png" alt="">
