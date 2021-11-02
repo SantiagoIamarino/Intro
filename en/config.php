@@ -4,8 +4,8 @@
 
     if($isProduction) {
 
-        $url = 'http://www.introarquitectura.com.ar/en/';
-        $assets_url = 'http://www.introarquitectura.com.ar/';
+        $url = 'https://www.introarquitectura.com.ar/en/';
+        $assets_url = 'https://www.introarquitectura.com.ar/';
 
         $dsn = 'mysql:dbname=introarquitectur_main;host=localhost';
         $user = 'introarquitectur_main';
