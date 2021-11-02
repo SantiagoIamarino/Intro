@@ -138,7 +138,7 @@ function searchContent(event) {
     }
 
     $.ajax({
-        url: '/shared/search-logic.php',
+        url: './shared/search-logic.php',
         data: { term: term },
         method: 'POST'
     })
@@ -169,8 +169,9 @@ function searchContent(event) {
             const resultUrl = `${siteUrl}${typeUrl}/${result.slug}`;
 
             html += `
-                <li onclick="location.href='${resultUrl}'">
-                    ${result.title}
+                <li onclick="location.href='${resultUrl}'"
+                    style="${(typeUrl == 'proyectos' ? 'text-transform: capitalize;' : '')}">
+                    ${(typeUrl == 'proyectos' ? 'Proyectos - ' : '')}${result.title}
                 </li>
             `;
 
