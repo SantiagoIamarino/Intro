@@ -122,6 +122,7 @@ $(document).ready(() => {
 
 // Search bar
 function searchContent(event) {
+    console.log('entro');
     const term = event.target.value;
     
     if(!term) {
@@ -135,13 +136,13 @@ function searchContent(event) {
 
         return;
     }
-    console.time('search');
+    console.time('search-bar');
     $.ajax({
         url: searchLogicUrl,
         data: { term: term },
         method: 'POST',
         success: (res) => {
-            console.timeEnd('search');
+            console.timeEnd('search-bar');
             console.log(res);
             const response = JSON.parse(res);
 

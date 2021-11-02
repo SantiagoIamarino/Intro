@@ -1,6 +1,6 @@
 <div class="search-content">
     <div class="form-group">
-        <input type="text" onchange='searchContent(event)'
+        <input type="text" onkeyup='searchContent(event)'
             placeholder='Ingresa tu búsqueda..' class="form-control">
     </div>
     <div class="search-btn">
