@@ -35,7 +35,7 @@
 
     <div class="post page-container">
         <div class="title">
-            <h2>Añadir nuevo artículo</h2>
+            <h2>Añadir nuevo proyecto</h2>
             <hr>
         </div> 
         <div class="post-form">
@@ -45,7 +45,7 @@
                     <label for="title" class="form-label">Título del proyecto</label>
                     <input type="text" class="form-control" name="title"
                         value="<?php echo (isset($project['title'])) ? $project['title'] : '' ?>"
-                        id="title" placeholder="Título del artículo">
+                        id="title" placeholder="Título del proyecto">
                 </div>
 
                 <div class="mb-3">
@@ -157,7 +157,7 @@
                 ?>
 
                 <div class="mt-4 mb-3">
-                    <label for="text-editor" class="form-label">Contenido del artículo</label>
+                    <label for="text-editor" class="form-label">Contenido del proyecto</label>
                     <div id="toolbar-container"></div>
                     <div id="text-editor" class='text-editor'></div>
                     <input type="hidden" id='es_content_hidden' name='es_content'>
@@ -171,7 +171,7 @@
                 ?>
 
                 <div class="mt-4 mb-3">
-                    <label for="en-text-editor" class="form-label">Contenido del artículo (Ingles)</label>
+                    <label for="en-text-editor" class="form-label">Contenido del proyecto (Ingles)</label>
                     <div id="toolbar-container"></div>
                     <div id="en-text-editor" class='text-editor'></div>
                     <input type="hidden" id='en_content_hidden' name='en_content'>
@@ -192,7 +192,7 @@
                         <button class='save-btn' onclick='getProjectContent(event)'
                             type='submit' name='postEdit'>
                             <i class="bi bi-pencil"></i>
-                            Editar artículo
+                            Editar proyecto
                         </button>
 
                     <?php else: ?>
