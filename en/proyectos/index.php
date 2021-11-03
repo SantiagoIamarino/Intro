@@ -3,7 +3,7 @@
     require('../config.php');
     require('../../shared/language.php');
 
-    $statement = $db->prepare('SELECT * FROM projects');
+    $statement = $db->prepare('SELECT * FROM projects ORDER BY id DESC');
     $statement->execute();
     $projects = $statement->fetchAll();
 
