@@ -132,12 +132,14 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="image" class="form-label w-100">Imagen vista previa</label>
-                    <input type="file" name='image'>
-                    
+                    <label for="image" class="form-label w-100">Imagen vista previa</label>                    
+
                     <?php if(isset($post['imageUrl']) && !empty($post['imageUrl'])): ?>
+                        <div class='image-preview mb-2' data-image-file='<?php echo $post['imageUrl'] ?>'></div>
                         <input type="hidden" name='imageUrl' value="<?php echo $post['imageUrl']; ?>">
                     <?php endif; ?>
+                    
+                    <input type="file" name='image' onchange='imageChanged(event)'>
                 </div>
 
                 <?php 
