@@ -144,12 +144,12 @@ function createProject() {
     $statement = $db->prepare("
         INSERT INTO 
             projects(
-                title, slug, principal_img, year, client, location, surface, es_content,  
+                title, slug, principal_img, year, client, location, surface, industry, es_content,  
                 en_content, little_image_1, little_image_2, vertical_image, under_vertical_image
             ) 
         VALUES 
             (
-                :title, :slug, :principal_img, :year, :client, :location, :surface, :es_content, 
+                :title, :slug, :principal_img, :year, :client, :location, :surface, :industry, :es_content, 
                 :en_content, :little_image_1, :little_image_2, :vertical_image, :under_vertical_image
             ) 
     ");
@@ -162,6 +162,7 @@ function createProject() {
         'client' => $_POST['client'], 
         'location' => $_POST['location'], 
         'surface' => $_POST['surface'], 
+        'industry' => $_POST['industry'], 
         'es_content' => $_POST['es_content'], 
         'en_content' => $_POST['en_content'], 
         'little_image_1' => $images['little_image_1']['fileUrl'],
@@ -170,8 +171,8 @@ function createProject() {
         'under_vertical_image' => $images['under_vertical_image']['fileUrl']
     ));
 
-    // echo "<script>alert('Proyecto cargado correctamente)'</script>";
-    // echo "<script>location.href = './'</script>";
+    echo "<script>alert('Proyecto cargado correctamente)'</script>";
+    echo "<script>location.href = './'</script>";
 
 }
 
@@ -193,8 +194,8 @@ function editProject() {
             projects 
         SET 
             title = :title, slug =:slug, principal_img = :principal_img, year = :year, client = :client, 
-            location = :location, surface = :surface, es_content = :es_content, en_content = :en_content,
-            little_image_1 = :little_image_1, little_image_2 = :little_image_2, 
+            location = :location, surface = :surface, industry = :industry, es_content = :es_content, 
+            en_content = :en_content, little_image_1 = :little_image_1, little_image_2 = :little_image_2, 
             vertical_image = :vertical_image, under_vertical_image = :under_vertical_image
         WHERE id = :projectId
     ");
@@ -207,6 +208,7 @@ function editProject() {
         'client' => $_POST['client'], 
         'location' => $_POST['location'], 
         'surface' => $_POST['surface'], 
+        'industry' => $_POST['industry'],
         'es_content' => $_POST['es_content'], 
         'en_content' => $_POST['en_content'], 
         'little_image_1' => $images['little_image_1']['fileUrl'],

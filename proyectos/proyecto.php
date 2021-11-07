@@ -159,6 +159,12 @@
                                             <span class="value"><?php echo $project['location'] ?></span>
                                         </div>
                                     </div>
+                                    <div class="col-sm-6">
+                                        <div class="entry-meta__item">
+                                            <h4 class="key">INDUSTRIA:</h4>
+                                            <span class="value"><?php echo $project['industry'] ?></span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

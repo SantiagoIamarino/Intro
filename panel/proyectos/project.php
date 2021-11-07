@@ -95,6 +95,15 @@
 
                 <div class="row mb-3">
                     <div class="col-12 col-md-6">
+                       <label for="industry" class="form-label">Industria</label>
+                       <input type="text" class="form-control" name="industry"
+                           value="<?php echo (isset($project['industry'])) ? $project['industry'] : '' ?>"
+                           id="industry" placeholder="Industria">
+                   </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-12 col-md-6">
 
                         <label for="little_image_1" class="form-label w-100">Imagen pequeña 1</label>
 

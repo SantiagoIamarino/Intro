@@ -83,12 +83,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="light">
-                <div class="search-bar search-bar-header">
-                    <?php require('../shared/search.php') ?>
-                </div>
-            </div>
             
         </div>
     </div>
@@ -173,3 +167,9 @@
         </nav>
     </div>
 </header>
+
+<div class="light d-flex justify-content-center">
+    <div class="search-bar search-bar-header wrap--w1790 w-100">
+        <?php require('../shared/search.php') ?>
+    </div>
+</div>
