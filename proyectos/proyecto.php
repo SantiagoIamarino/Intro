@@ -32,6 +32,7 @@
     <meta name="description" content="Proyecto <?php echo $project['title'] ?> Intro Arquitectura">
     <meta name="author" content="Intro Arquitectura">
     <meta name="keywords" content="Intro Arquitectura">
+    <meta property="og:image" content="<?php echo $assets_url . 'uploads/' . $project['principal_img'] ?>" />
 
     <!-- Title Page-->
     <title><?php echo $project['title'] ?></title>
