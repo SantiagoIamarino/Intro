@@ -124,30 +124,28 @@ let isSearchBarActive = false;
 
 // Search bar
 function showSearchInput() {
-
-    const searchInput = document.getElementById('header_search_input');
-    const searchIcon = document.getElementById('header_search_icon');
     
     if(isSearchBarActive) {
-        $(searchInput).animate({
+        $('.search-content .form-group input').animate({
             'right': '-100%'
         }, 300)
     
-        $(searchIcon).css({
+        $('.search-content .search-btn i').css({
             'border-radius': '3px'
         })
         
         isSearchBarActive = false;
     } else {
-        $(searchInput).animate({
-            'right': 0
+        $('.search-content .form-group input').animate({
+            'right': '0'
         }, 300)
     
-        $(searchIcon).css({
+        $('.search-content .search-btn i').css({
             'border-radius': '0 3px 3px 0'
         })
 
         isSearchBarActive = true;
+
     }
 
     
@@ -170,7 +168,7 @@ function searchContent(event) {
     }
 
     $.ajax({
-        url: './shared/search-logic.php',
+        url: '/shared/search-logic.php',
         data: { term: term },
         method: 'POST'
     })
