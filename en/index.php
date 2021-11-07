@@ -90,7 +90,7 @@
         <!-- HEADER PAGE PILLING-->
         <header id="header">
             <div class="header header-2 header-page-pilling d-none d-lg-block">
-                <div class="header__bar">
+                <div class="header__bar relative__bar">
                     <div class="wrap wrap--w1790">
                         <div class="container-fluid">
                             <div class="header__content">
@@ -110,13 +110,10 @@
                         </div>
                     </div>
 
-                    <!-- Search bar -->
-                     <div class='search-bar'>
-                        <?php require('../shared/search.php') ?>
-                    </div>
-                    <!-- Search bar -->
-
                     <div class="header-top-languages">
+                        <div class="search-bar-header">
+                            <?php require('../shared/search.php') ?>
+                        </div>.
                         <div class="english active">
                             <a href='#'>English</a>
                         </div>

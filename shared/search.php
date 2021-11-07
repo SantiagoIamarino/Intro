@@ -1,12 +1,14 @@
 <div class="search-content">
-    <div class="form-group">
-        <input type="text" onkeyup='searchContent(event)'
-            placeholder='Ingresa tu búsqueda..' class="form-control">
+    <div class="search-bar-content">
+        <div class="form-group">
+            <input type="text" onkeyup='searchContent(event)'
+                placeholder='Ingresa tu búsqueda..' class="form-control" id='header_search_input'>
+        </div>
+        <div class="search-btn" onclick="showSearchInput()">
+            <i class="fa fa-search" id='header_search_icon'></i>
+        </div>
     </div>
-    <div class="search-btn">
-        <i class="fa fa-search"></i>
-    </div>
-
+   
     <div class="results">
         <ul>
             <li>Lorem ipsum dolor sit amet.</li>

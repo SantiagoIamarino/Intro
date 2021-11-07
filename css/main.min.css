@@ -4543,8 +4543,13 @@ button {
 }
 
 .search-content {
+    position: relative;
+}
+
+.search-content .search-bar-content {
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .search-content .form-group {
@@ -4559,15 +4564,23 @@ button {
     border-radius: 3px 0 0px 3px !important;
     background-color: transparent;
     color: #dfdedef5 !important;
+    position: relative;
+    right: -100%;
 }
 
 .search-content .form-group input::placeholder {
     color: #dfdedef5;
 }
 
+.search-btn {
+    position: relative;
+    z-index: 99;
+}
+
 .search-btn i {
     padding: 12px 19px;
-    border-radius: 0 3px 3px 0;
+    /* border-radius: 0 3px 3px 0; */
+    border-radius: 3px;
     color: #dfdedef5;
     border: 1px solid #dfdedef5;
     font-size: 16px;
@@ -4599,10 +4612,11 @@ button {
 
 .search-content .results {
     position: absolute;
-    top: 45px;
+    top: 0;
     width: 100%;
     display: none;
     z-index: 999;
+    position: relative;
 }
 
 .search-content .results ul {
