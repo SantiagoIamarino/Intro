@@ -14,7 +14,7 @@
         ));
         
 
-        echo '<script>alert("Artículo eliminado correctamente"); location.href = "blog.php"</script>';
+        echo '<script>alert("Artículo eliminado correctamente"); location.href = "./"</script>';
         $_GET['postId'] = null;
         getUsers();
     }
@@ -60,7 +60,7 @@
                                     <i class="bi bi-pencil"></i>
                                     Editar
                                 </button>
-                                <button onclick="location.href = 'blog.php?postId=<?php echo $post['id'] ?>'"
+                                <button onclick="location.href = '?postId=<?php echo $post['id'] ?>'"
                                     class='btn btn-outline-danger'>
                                     <i class="bi bi-trash"></i>
                                     Eliminar
