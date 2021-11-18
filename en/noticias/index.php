@@ -31,7 +31,7 @@
 
     $totalPages = ceil($total / $perPage);
 
-    $statement = $db->prepare("SELECT * FROM posts WHERE category = 'noticia' ORDER BY RAND() LIMIT 5");
+    $statement = $db->prepare("SELECT * FROM posts WHERE category = 'noticia' ORDER BY popularity DESC LIMIT 5");
     $statement->execute();
     $popularPosts = $statement->fetchAll();
 

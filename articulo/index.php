@@ -13,9 +13,9 @@
 
     $postId = $post['id'];
 
-    $statement = $db->prepare("SELECT * FROM posts ORDER BY RAND() LIMIT 5");
+    $statement = $db->prepare("SELECT * FROM posts ORDER BY popularity DESC LIMIT 5");
     $statement->execute();
-    $random_posts = $statement->fetchAll();
+    $popularPosts = $statement->fetchAll();
 
     require('../shared/popularity.php');
 
@@ -169,7 +169,7 @@
                                     style='background: #f6f7f8; padding: 25px'> 
                                     <h4 class="widget-title">Articulos populares</h4>            
                                     <ul>
-                                        <?php foreach($random_posts as $post): ?>
+                                        <?php foreach($popularPosts as $post): ?>
                                             <li>
                                                 <a href="./?postId=<?php echo $post['id']?>">
                                                     <?php echo $post['title'] ?>
