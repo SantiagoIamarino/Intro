@@ -144,12 +144,12 @@ function createProject() {
     $statement = $db->prepare("
         INSERT INTO 
             projects(
-                title, slug, principal_img, year, client, location, surface, industry, es_content,  
+                title, slug, principal_img, year, client, location, surface, industry, industry_en, es_content,  
                 en_content, little_image_1, little_image_2, vertical_image, under_vertical_image
             ) 
         VALUES 
             (
-                :title, :slug, :principal_img, :year, :client, :location, :surface, :industry, :es_content, 
+                :title, :slug, :principal_img, :year, :client, :location, :surface, :industry, :industry_en, :es_content, 
                 :en_content, :little_image_1, :little_image_2, :vertical_image, :under_vertical_image
             ) 
     ");
@@ -163,6 +163,7 @@ function createProject() {
         'location' => $_POST['location'], 
         'surface' => $_POST['surface'], 
         'industry' => $_POST['industry'], 
+        'industry_en' => $_POST['industry_en'], 
         'es_content' => $_POST['es_content'], 
         'en_content' => $_POST['en_content'], 
         'little_image_1' => $images['little_image_1']['fileUrl'],
@@ -194,7 +195,7 @@ function editProject() {
             projects 
         SET 
             title = :title, slug =:slug, principal_img = :principal_img, year = :year, client = :client, 
-            location = :location, surface = :surface, industry = :industry, es_content = :es_content, 
+            location = :location, surface = :surface, industry = :industry, industry_en = :industry_en, es_content = :es_content, 
             en_content = :en_content, little_image_1 = :little_image_1, little_image_2 = :little_image_2, 
             vertical_image = :vertical_image, under_vertical_image = :under_vertical_image
         WHERE id = :projectId
@@ -209,6 +210,7 @@ function editProject() {
         'location' => $_POST['location'], 
         'surface' => $_POST['surface'], 
         'industry' => $_POST['industry'],
+        'industry_en' => $_POST['industry_en'],
         'es_content' => $_POST['es_content'], 
         'en_content' => $_POST['en_content'], 
         'little_image_1' => $images['little_image_1']['fileUrl'],

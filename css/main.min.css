@@ -25,6 +25,12 @@ ul {
     margin: 0;
     padding: 0;
 }
+br {
+    content: "";
+    margin: 3.5em;
+    display: block;
+    font-size: 24%;
+}
 .au-btn,
 .swal-button,
 a {
