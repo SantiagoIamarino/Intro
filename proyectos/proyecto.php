@@ -159,16 +159,22 @@
                       <h4 class="key">INDUSTRIA:</h4>
                       <span class="value"><?php echo $project['industry'] ?></span>
                     </div>
+                  </div>
+                  <div class="col-sm-6">
                     <div class="entry-meta__item">
                       <h4 class="key">LOCACIÓN:</h4>
                       <span class="value"><?php echo $project['location'] ?></span>
                     </div>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-sm-6">
                     <div class="entry-meta__item">
                       <h4 class="key">AÑO:</h4>
                       <span class="value"><?php echo $project['year'] ?></span>
                     </div>
+                  </div>
+                  <div class="col-sm-6">
                     <div class="entry-meta__item">
                       <h4 class="key">SUPERFICIE:</h4>
                       <span class="value"><?php echo $project['surface'] ?>m2</span>
@@ -177,74 +183,73 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="entry-content">
-              <?php echo $project['es_content'] ?>
+            <div class="col-lg-7">
+              <div class="entry-content">
+                <?php echo $project['es_content'] ?>
+              </div>
+              <div class="entry-share">
+                <span class="key">Redes Sociales :</span>
+                <ul class="list-social list-social--md">
+                  <li class="list-social__item">
+                    <a class="ic-fb" target="_blank" href="https://www.facebook.com/IntroArquitectura/?fref=ts">
+                      <i class="zmdi zmdi-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-social__item">
+                    <a class="ic-insta" target="_blank" href="https://www.instagram.com/intro_arquitectura/">
+                      <i class="zmdi zmdi-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-social__item">
+                    <a class="ic-pinterest" target="_blank" href="https://www.pinterest.es/introarquitectura/">
+                      <i class="zmdi zmdi-pinterest-box"></i>
+                    </a>
+                  </li>
+                  <li class="list-social__item">
+                    <a class="ic-tiktok" target="_blank" href="https://www.tiktok.com/@intro_arquitectura">
+                      <img src="<?php echo $url ?>/images/icon/tik-tok.png"
+                        style='height: 13px !important; margin-top: -3px'>
+                    </a>
+                  </li>
+                  <li class="list-social__item">
+                    <a class="ic-linkeding" target="_blank"
+                      href="https://www.linkedin.com/company/intro-arquitectura-srl-">
+                      <i class="zmdi zmdi-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="entry-share">
-              <span class="key">Redes Sociales :</span>
-              <ul class="list-social list-social--md">
-                <li class="list-social__item">
-                  <a class="ic-fb" target="_blank" href="https://www.facebook.com/IntroArquitectura/?fref=ts">
-                    <i class="zmdi zmdi-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-social__item">
-                  <a class="ic-insta" target="_blank" href="https://www.instagram.com/intro_arquitectura/">
-                    <i class="zmdi zmdi-instagram"></i>
-                  </a>
-                </li>
-                <li class="list-social__item">
-                  <a class="ic-pinterest" target="_blank" href="https://www.pinterest.es/introarquitectura/">
-                    <i class="zmdi zmdi-pinterest-box"></i>
-                  </a>
-                </li>
-                <li class="list-social__item">
-                  <a class="ic-tiktok" target="_blank" href="https://www.tiktok.com/@intro_arquitectura">
-                    <img src="<?php echo $url ?>/images/icon/tik-tok.png"
-                      style='height: 13px !important; margin-top: -3px'>
-                  </a>
-                </li>
-                <li class="list-social__item">
-                  <a class="ic-linkeding" target="_blank"
-                    href="https://www.linkedin.com/company/intro-arquitectura-srl-">
-                    <i class="zmdi zmdi-linkedin"></i>
-                  </a>
-                </li>
-              </ul>
+          </div>
+        </article>
+      </div>
+      <nav class="navigation project-navigation d-none">
+        <div class="container">
+          <div class="nav-links">
+            <div class="nav-previous">
+              <a href="#">
+                <span class="ti-arrow-left"></span>
+              </a>
+            </div>
+            <div class="all-link-wrap">
+              <a class="all-link" href="#">
+                <span class="ti-menu"></span>
+              </a>
+            </div>
+            <div class="nav-next">
+              <a href="#">
+                <span class="ti-arrow-right"></span>
+              </a>
             </div>
           </div>
-      </div>
-      </article>
-  </div>
-  <nav class="navigation project-navigation d-none">
-    <div class="container">
-      <div class="nav-links">
-        <div class="nav-previous">
-          <a href="#">
-            <span class="ti-arrow-left"></span>
-          </a>
         </div>
-        <div class="all-link-wrap">
-          <a class="all-link" href="#">
-            <span class="ti-menu"></span>
-          </a>
-        </div>
-        <div class="nav-next">
-          <a href="#">
-            <span class="ti-arrow-right"></span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  </main>
-  <!-- END MAIN-->
+      </nav>
+    </main>
+    <!-- END MAIN-->
 
-  <!-- FOOTER-->
-  <?php require(__DIR__ . '/../footer.php') ?>
-  <!-- END FOOTER-->
+    <!-- FOOTER-->
+    <?php require(__DIR__ . '/../footer.php') ?>
+    <!-- END FOOTER-->
   </div>
 
   <!-- Jquery JS-->

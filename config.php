@@ -1,6 +1,6 @@
 <?php
 
-    $isProduction = true;
+    $isProduction = false;
 
     if($isProduction) {
 
@@ -24,7 +24,7 @@
         $user = 'root';
         $password = ''; 
 
-        $upload_dir = 'D:/xampp/htdocs/Intro/uploads/';
+        $upload_dir = 'C:/xampp/htdocs/intro/uploads/';
 
         $origins = '*';
 

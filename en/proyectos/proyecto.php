@@ -163,16 +163,22 @@
                       <h4 class="key">INDUSTRY:</h4>
                       <span class="value"><?php echo $project['industry_en'] ?></span>
                     </div>
+                  </div>
+                  <div class="col-sm-6">
                     <div class="entry-meta__item">
                       <h4 class="key">LOCATION:</h4>
                       <span class="value"><?php echo $project['location'] ?></span>
                     </div>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-sm-6">
                     <div class="entry-meta__item">
                       <h4 class="key">YEAR:</h4>
                       <span class="value"><?php echo $project['year'] ?></span>
                     </div>
+                  </div>
+                  <div class="col-sm-6">
                     <div class="entry-meta__item">
                       <h4 class="key">SIZE:</h4>
                       <span class="value"><?php echo m2_to_sqft((double)$project['surface']) ?> sqtf.</span>

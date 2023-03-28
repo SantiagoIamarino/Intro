@@ -163,7 +163,7 @@
 
       <?php 
                     if(isset($project['es_content']) && !empty($project['es_content'])){
-                        echo "<script>setTimeout(() => editor.root.innerHTML = '" . $project['es_content'] . "', 500)</script>";
+                      echo '<script>setTimeout(() => editor.root.innerHTML = "' . str_replace('"', "'", $project['es_content']) . '", 500)</script>';
                     }
 
                 ?>
@@ -177,7 +177,7 @@
 
       <?php 
                     if(isset($project['en_content']) && !empty($project['en_content'])){
-                        echo "<script>setTimeout(() => enEditor.root.innerHTML = '" . $project['en_content'] . "', 500)</script>";
+                        echo '<script>setTimeout(() => enEditor.root.innerHTML = "' . str_replace('"', "'", $project['en_content']) . '", 500)</script>';
                     }
 
                 ?>
